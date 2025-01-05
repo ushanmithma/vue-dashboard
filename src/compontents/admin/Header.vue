@@ -12,8 +12,8 @@ defineProps({
 </script>
 
 <template>
-  <header class="py-3 px-8 border-b sticky top-0 z-10 bg-white">
-    <div class="flex items-center justify-between">
+  <header class="py-3 px-4 lg:px-8 border-b sticky top-0 z-10 bg-white">
+    <div class="flex items-center justify-between gap-4">
       <div class="flex gap-3 items-center">
         <div class="lg:hidden">
           <button type="button" class="transition-colors hover:bg-gray-200 rounded text-gray-600 px-1" @click.prevent="emits('toggleSidebar')">

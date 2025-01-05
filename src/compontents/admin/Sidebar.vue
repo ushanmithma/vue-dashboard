@@ -44,7 +44,7 @@ const links = [
         <div>
           <template v-for="(item, index) in links" :key="index">
             <li v-if="item?.link == null && item?.label" class="my-2">
-              <span class="text-xs text-gray-400">{{ item.label }}</span>
+              <span class="text-xs text-gray-400 uppercase">{{ item.label }}</span>
             </li>
             <li v-else-if="item?.link && item?.label" class="my-1">
               <a

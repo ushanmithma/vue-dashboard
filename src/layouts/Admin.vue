@@ -7,13 +7,13 @@ import Breadcrumb from '../compontents/admin/Breadcrumb.vue'
 const expanded = ref(false)
 
 const toggleSidebar = () => {
-  expanded.value = !expanded.value
+	expanded.value = !expanded.value
 }
 </script>
 
 <template>
 	<div class="flex relative max-h-screen overflow-y-auto">
-    <Sidebar :expanded="expanded" @toggle-sidebar="toggleSidebar" />
+		<Sidebar :expanded="expanded" @toggle-sidebar="toggleSidebar" />
 		<main class="flex-1 transition-all overflow-y-auto">
 			<Header :expanded="expanded" @toggle-sidebar="toggleSidebar" />
 			<Breadcrumb />

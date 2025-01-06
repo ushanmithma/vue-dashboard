@@ -14,10 +14,10 @@ const toggleSidebar = () => {
 <template>
 	<div class="flex relative max-h-screen overflow-y-auto">
 		<Sidebar :expanded="expanded" @toggle-sidebar="toggleSidebar" />
-		<SimpleBar class="flex-1 transition-all overflow-y-auto">
+		<main class="flex-1 transition-all overflow-y-auto">
 			<Header :expanded="expanded" @toggle-sidebar="toggleSidebar" />
 			<Breadcrumb />
 			<RouterView />
-		</SimpleBar>
+		</main>
 	</div>
 </template>

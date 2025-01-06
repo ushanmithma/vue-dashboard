@@ -4,10 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-	scrollbar-width: none;
-}
-
 @layer base {
 	@font-face {
 		font-family: 'Roboto';

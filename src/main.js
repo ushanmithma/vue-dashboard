@@ -4,6 +4,8 @@ import App from './App.vue'
 import { initRouter } from './router'
 import DataTables from 'datatables.net-vue3'
 import DataTableLib from 'datatables.net-dt'
+import SimpleBar from 'simplebar-vue'
+import 'simplebar-vue/dist/simplebar.min.css'
 
 const app = createApp(App)
 
@@ -13,6 +15,7 @@ const app = createApp(App)
 
 	DataTables.use(DataTableLib)
 	app.component('DataTables', DataTables)
+	app.component('SimpleBar', SimpleBar)
 
 	app.mount('#app')
 })()

@@ -21,10 +21,10 @@ const links = [
 
 <template>
 	<aside
-		class="h-screen bg-gray-100 border-r shadow-sm w-64 fixed top-0 bottom-0 left-0 z-50 transition-transform lg:relative lg:top-[initial] lg:bottom-[initial] lg:left-[initial] lg:z-auto lg:translate-x-0"
+		class="h-screen bg-gray-100 border-r shadow-sm w-56 fixed top-0 bottom-0 left-0 z-50 transition-transform lg:relative lg:top-[initial] lg:bottom-[initial] lg:left-[initial] lg:z-auto lg:translate-x-0"
 		:class="[expanded ? 'translate-x-0' : '-translate-x-full']"
 	>
-		<nav class="h-full flex flex-col overflow-y-auto">
+		<nav class="h-full flex flex-col overflow-y-auto scrollbar-hidden">
 			<div class="p-3 pb-2 flex justify-between items-center">
 				<svg class="overflow-hidden w-32" viewBox="0 0 132 35" fill="black" xmlns="http://www.w3.org/2000/svg">
 					<path

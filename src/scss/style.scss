@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+// * {
+// 	scrollbar-width: thin;
+// }
+
+*::-webkit-scrollbar {
+	@apply bg-transparent w-2;
+}
+
+*::-webkit-scrollbar-thumb {
+	@apply bg-gray-300 rounded-full;
+}
+
 @layer base {
 	@font-face {
 		font-family: 'Roboto';
@@ -14,4 +26,12 @@
 		font-style: normal;
 		font-display: swap;
 	}
+}
+
+.scrollbar-hidden::-webkit-scrollbar-thumb {
+	@apply bg-transparent;
+}
+
+.scrollbar-hidden:hover::-webkit-scrollbar-thumb {
+	@apply bg-gray-300;
 }

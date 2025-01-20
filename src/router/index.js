@@ -7,6 +7,11 @@ const routes = [
 		component: () => import('../layouts/Admin.vue'),
 		children: [{ path: '', name: 'admin-dashboard', component: () => import('../pages/admin/dashboard.vue') }],
 	},
+	{
+		path: '/login',
+		name: 'login',
+		component: () => import('../pages/login.vue'),
+	},
 ]
 
 export const initRouter = (app) => {

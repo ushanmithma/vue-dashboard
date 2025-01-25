@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-import Header from '../compontents/admin/Header.vue'
-import Sidebar from '../compontents/admin/Sidebar.vue'
-import Breadcrumb from '../compontents/admin/Breadcrumb.vue'
+import Header from '../components/admin/Header.vue'
+import Sidebar from '../components/admin/Sidebar.vue'
+import Breadcrumb from '../components/admin/Breadcrumb.vue'
 
 const expanded = ref(false)
 

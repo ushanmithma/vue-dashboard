@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-	<header class="py-3 px-4 lg:px-8 border-b sticky top-0 z-10 bg-white">
+	<header class="py-3 px-4 lg:px-8 border-b border-gray-200 sticky top-0 z-10 bg-white">
 		<div class="flex items-center justify-between gap-4">
 			<div class="flex gap-3 items-center">
 				<div class="lg:hidden">
@@ -51,7 +51,7 @@ defineProps({
 						</svg>
 					</div>
 				</div>
-				<div class="border-l pl-3">
+				<div class="border-l border-gray-200 pl-3">
 					<Menu as="div" class="relative">
 						<div>
 							<MenuButton class="flex items-center gap-2">

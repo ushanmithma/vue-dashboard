@@ -21,7 +21,7 @@ const links = [
 
 <template>
 	<aside
-		class="h-screen bg-gray-100 border-r shadow-sm w-56 fixed top-0 bottom-0 left-0 z-50 transition-transform lg:relative lg:top-[initial] lg:bottom-[initial] lg:left-[initial] lg:z-auto lg:translate-x-0"
+		class="h-screen bg-gray-100 border-r border-gray-200 shadow-sm w-56 fixed top-0 bottom-0 left-0 z-50 transition-transform lg:relative lg:top-[initial] lg:bottom-[initial] lg:left-[initial] lg:z-auto lg:translate-x-0"
 		:class="[expanded ? 'translate-x-0' : '-translate-x-full']"
 	>
 		<SimpleBar class="h-full">
@@ -66,13 +66,13 @@ const links = [
 								</a>
 							</li>
 							<li v-else-if="item?.divider" class="my-2">
-								<hr />
+								<hr class="border-b border-gray-200" />
 							</li>
 						</template>
 					</div>
 					<div>
 						<li class="my-2">
-							<hr />
+							<hr class="border-b border-gray-200" />
 						</li>
 						<li class="my-1">
 							<a

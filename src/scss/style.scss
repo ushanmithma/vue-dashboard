@@ -1,8 +1,6 @@
 @use './vendor/datatables' as *;
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
 @layer base {
 	@font-face {

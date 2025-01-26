@@ -2,7 +2,7 @@
 
 <template>
 	<div class="flex justify-center">
-		<div class="flex min-h-full w-full flex-col justify-center px-6 py-12 lg:px-8 xl:w-96 xl:mt-6 xl:rounded-md xl:border xl:shadow-md">
+		<div class="flex min-h-full w-full flex-col justify-center px-6 py-12 lg:px-8 xl:w-96 xl:mt-6 xl:rounded-md xl:border xl:border-gray-200 xl:shadow-md">
 			<div class="sm:mx-auto sm:w-full sm:max-w-sm">
 				<img class="mx-auto h-10 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=blue&shade=600" alt="Your Company" />
 				<h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Sign in to your account</h2>

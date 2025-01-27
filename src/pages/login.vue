@@ -1,8 +1,15 @@
-<script setup></script>
+<script setup>
+import { reactive } from 'vue'
+import Checkbox from '../components/Checkbox.vue'
+
+const form = reactive({
+	remember: false,
+})
+</script>
 
 <template>
-	<div class="flex justify-center">
-		<div class="flex min-h-full w-full flex-col justify-center px-6 py-12 lg:px-8 xl:w-96 xl:mt-6 xl:rounded-md xl:border xl:border-gray-200 xl:shadow-md">
+	<div class="flex justify-center lg:h-screen lg:items-center">
+		<div class="flex w-full flex-col justify-center px-6 py-12 lg:px-8 lg:w-96 lg:mt-6 lg:rounded-md lg:border lg:border-gray-200 lg:shadow-md">
 			<div class="sm:mx-auto sm:w-full sm:max-w-sm">
 				<img class="mx-auto h-10 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=blue&shade=600" alt="Your Company" />
 				<h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Sign in to your account</h2>
@@ -41,15 +48,12 @@
 						</div>
 					</div>
 					<div>
-						<label for="remember-me">
-							<input type="checkbox" name="remember" id="remember-me" />
-							Remember me
-						</label>
+						<Checkbox v-model="form.remember" value="true" label="Remember me" />
 					</div>
 					<div>
 						<button
 							type="submit"
-							class="flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+							class="flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm cursor-pointer hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
 						>
 							Sign in
 						</button>

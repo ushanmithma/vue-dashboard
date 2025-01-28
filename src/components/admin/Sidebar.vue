@@ -10,32 +10,53 @@ defineProps({
 	},
 })
 
-const links = {
-	upper: [
-		{ label: 'Basic' },
-		{ label: 'Dashboard', link: '#' },
-		{
-			label: 'Reservation',
-			children: [
-				{ label: 'Transaction List', link: '#' },
-				{ label: 'Add Payment', link: '#' },
-				{ label: 'Payment Configuration', link: '#' },
-			],
-		},
-		{ label: 'Accounts', link: '#' },
-		{ divider: true },
-		{ label: 'Sales', link: '#' },
-		{
-			label: 'Payment Methods',
-			children: [
-				{ label: 'Transaction List', link: '#' },
-				{ label: 'Add Payment', link: '#' },
-				{ label: 'Payment Configuration', link: '#' },
-			],
-		},
-	],
-	lower: [{ divider: true }, { label: 'Settings', link: '#' }],
-}
+const links = [
+	{ label: 'Basic' },
+	{ label: 'Dashboard', link: '#', icon: 'dashboard' },
+	{
+		label: 'Reservation',
+		icon: 'checkbook',
+		children: [
+			{ label: 'Reservation List', link: '#' },
+			{ label: 'Create Reservation', link: '#' },
+		],
+	},
+	{ label: 'Accounts', link: '#', icon: 'person' },
+	{ divider: true },
+	{ label: 'Sales', link: '#', icon: 'leaderboard' },
+	{
+		label: 'Payment Methods',
+		icon: 'receipt_long',
+		children: [
+			{ label: 'Transaction List', link: '#' },
+			{ label: 'Add Payment', link: '#' },
+			{ label: 'Payment Configuration', link: '#' },
+		],
+	},
+	{ label: 'Articles', link: '#', icon: 'newspaper' },
+	{ label: 'Products', link: '#', icon: 'category' },
+	{
+		label: 'Reports',
+		icon: 'quick_reference',
+		children: [
+			{ label: 'Sales Reports', link: '#' },
+			{ label: 'Reservation Reports', link: '#' },
+		],
+	},
+	{ label: 'Applications', link: '#', icon: 'widgets' },
+	{ label: 'Branches', link: '#', icon: 'corporate_fare' },
+	{ label: 'Careers', link: '#', icon: 'person_apron' },
+	{ divider: true },
+	{
+		label: 'Settings',
+		icon: 'settings',
+		children: [
+			{ label: 'Roles', link: '#' },
+			{ label: 'Permissions', link: '#' },
+			{ label: 'Users', link: '#' },
+		],
+	},
+]
 </script>
 
 <template>
@@ -44,7 +65,7 @@ const links = {
 		:class="[expanded ? 'translate-x-0' : '-translate-x-full']"
 	>
 		<SimpleBar class="h-full">
-			<nav class="h-screen flex flex-col overflow-y-auto">
+			<nav class="flex flex-col overflow-y-auto">
 				<div class="p-3 pb-2 flex justify-between items-center">
 					<svg class="overflow-hidden w-32" viewBox="0 0 132 35" fill="black" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -63,14 +84,9 @@ const links = {
 						</svg>
 					</button>
 				</div>
-				<ul class="flex-1 flex flex-col justify-between p-3">
+				<ul class="flex-1 flex flex-col p-3">
 					<div>
-						<template v-for="(item, index) in links.upper" :key="index">
-							<SidebarItem :item="item" />
-						</template>
-					</div>
-					<div>
-						<template v-for="(item, index) in links.lower" :key="index">
+						<template v-for="(item, index) in links" :key="index">
 							<SidebarItem :item="item" />
 						</template>
 					</div>

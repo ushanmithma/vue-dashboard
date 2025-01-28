@@ -53,21 +53,19 @@ defineProps({
 				</div>
 				<div class="border-l border-gray-200 pl-3">
 					<Menu as="div" class="relative">
-						<div>
-							<MenuButton class="flex items-center gap-2">
-								<div class="w-8 h-8 overflow-hidden rounded-full outline outline-1 outline-gray-200 outline-offset-1">
-									<img src="/images/avatar/placeholder.png" alt="" />
-								</div>
-								<div class="hidden md:block text-left">
-									<p class="font-bold text-gray-800 text-sm whitespace-nowrap text-ellipsis overflow-hidden max-w-24">Greatest Lord</p>
-									<small class="text-gray-400 text-xs leading-none block">Super Admin</small>
-								</div>
-								<svg class="shrink-0 fill-gray-400 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path d="M24 24H0V0h24v24z" fill="none" opacity=".87" />
-									<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" />
-								</svg>
-							</MenuButton>
-						</div>
+						<MenuButton class="flex items-center gap-2 cursor-pointer">
+							<div class="w-8 h-8 overflow-hidden rounded-full outline outline-1 outline-gray-200 outline-offset-1">
+								<img src="/images/avatar/placeholder.png" alt="" />
+							</div>
+							<div class="hidden md:block text-left">
+								<p class="font-bold text-gray-800 text-sm whitespace-nowrap text-ellipsis overflow-hidden max-w-24">Greatest Lord</p>
+								<small class="text-gray-400 text-xs leading-none block">Super Admin</small>
+							</div>
+							<svg class="shrink-0 fill-gray-400 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<path d="M24 24H0V0h24v24z" fill="none" opacity=".87" />
+								<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" />
+							</svg>
+						</MenuButton>
 						<Transition
 							enter-active-class="transition duration-100 ease-out"
 							enter-from-class="transform scale-95 opacity-0"

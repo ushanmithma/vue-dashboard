@@ -6,14 +6,13 @@ export const FULL_PATH = SERVER_URL + API_PATH
 
 export const $auth = axios.create({
 	baseURL: SERVER_URL,
+	withCredentials: true,
 })
 
 export const $http = axios.create({
 	baseURL: SERVER_URL + API_PATH,
 	withCredentials: true,
-	headers: {
-		'X-Requested-With': 'XMLHttpRequest',
-	},
+	withXSRFToken: true,
 })
 
 $http.interceptors.response.use(

@@ -75,7 +75,7 @@ defineProps({
 							leave-to-class="transform scale-95 opacity-0"
 						>
 							<MenuItems
-								class="absolute right-0 mt-2 origin-top-right divide-y divide-gray-100 rounded bg-white shadow-lg ring-1 ring-black/5 focus:outline-none min-w-max md:w-full md:min-w-44 z-50 flex flex-col py-2"
+								class="absolute z-[999] right-0 mt-2 origin-top-right divide-y divide-gray-100 rounded bg-white shadow-lg ring-1 ring-black/5 focus:outline-none min-w-max md:w-full md:min-w-44 z-50 flex flex-col py-2"
 							>
 								<div class="pb-2">
 									<MenuItem>

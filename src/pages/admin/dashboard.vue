@@ -1,8 +1,11 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import LoadingPanel from '../../components/LoadingPanel.vue'
 
 const table = ref()
 let dt
+
+const isLoading = ref(false)
 
 const options = {
 	ordering: true,
@@ -18,7 +21,8 @@ onMounted(async () => {
 </script>
 
 <template>
-	<div>
+	<div class="relative">
+		<LoadingPanel :is-visible="isLoading" class="z-10" />
 		<DataTables ref="table" :options="options">
 			<thead>
 				<tr>

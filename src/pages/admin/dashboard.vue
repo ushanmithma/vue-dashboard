@@ -22,7 +22,7 @@ onMounted(async () => {
 
 <template>
 	<div class="relative">
-		<LoadingPanel :is-visible="isLoading" class="z-10" />
+		<LoadingPanel :is-visible="isLoading" class="z-1" />
 		<DataTables ref="table" :options="options">
 			<thead>
 				<tr>

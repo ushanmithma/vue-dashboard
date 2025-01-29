@@ -11,6 +11,9 @@ export const $auth = axios.create({
 
 export const $http = axios.create({
 	baseURL: SERVER_URL + API_PATH,
+	headers: {
+		Accept: 'application/json',
+	},
 	withCredentials: true,
 	withXSRFToken: true,
 })

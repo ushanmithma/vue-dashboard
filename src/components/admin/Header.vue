@@ -28,7 +28,7 @@ defineProps({
 			</div>
 			<div class="flex items-center gap-3">
 				<div>
-					<div class="relative h-10 w-56 overflow-hidden">
+					<div class="relative h-10 w-56 overflow-hidden rounded-full">
 						<div class="absolute top-0 left-0 z-10 h-full flex items-center">
 							<svg class="ml-3 fill-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 								<path
@@ -39,7 +39,7 @@ defineProps({
 						<input
 							type="search"
 							placeholder="Search for..."
-							class="absolute inset-0 w-full h-full bg-gray-200 rounded-full px-4 pl-10 transition-all text-sm focus:outline outline-1 outline-gray-300"
+							class="absolute inset-0 w-full h-full bg-gray-200 rounded-full px-4 pl-10 transition-all text-sm outline outline-offset-2 outline-1 outline-gray-300"
 						/>
 					</div>
 				</div>

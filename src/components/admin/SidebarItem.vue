@@ -49,7 +49,7 @@ function toggleMenu() {
 				</svg>
 			</div>
 		</span>
-		<ul ref="collapsible" class="ps-4 my-1 space-y-1 max-h-[0px] overflow-hidden transition-[max-height] duration-300 ease-in-out">
+		<ul ref="collapsible" class="ps-5 my-1 space-y-1 max-h-[0px] overflow-hidden transition-[max-height] duration-300 ease-in-out">
 			<li v-for="(child, idx) in props.item.children" :key="idx" class="before:content-['—'] before:text-gray-400 before:pe-2">
 				<a :href="child.link" class="text-xs text-gray-600 hover:text-blue-500 hover:underline">{{ child.label }}</a>
 			</li>

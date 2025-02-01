@@ -3,7 +3,9 @@ import { reactive, ref } from 'vue'
 import Checkbox from '../components/Checkbox.vue'
 import LoadingButton from '../components/LoadingButton.vue'
 import { useAuthStore } from '../stores'
+import { useRoute } from 'vue-router'
 
+const route = useRoute()
 const authStore = useAuthStore()
 
 const form = reactive({
@@ -19,7 +21,7 @@ const login = () => {
 	authStore.login(form).then(async (result) => {
 		if (result.type === 'success') {
 			isLoading.value = false
-			window.location.href = '/admin'
+			window.location.href = route.query?.redirect ?? '/admin'
 		} else {
 			isLoading.value = false
 			console.error(result.message)

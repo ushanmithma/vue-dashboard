@@ -1,4 +1,8 @@
 import axios from 'axios'
+import pinia from '../stores/pinia'
+import { useAuthStore } from '../stores'
+
+const authStore = useAuthStore(pinia)
 
 export const SERVER_URL = import.meta.env.VITE_SERVER_URL
 export const API_PATH = import.meta.env.VITE_API_PATH
@@ -20,9 +24,11 @@ export const $http = axios.create({
 
 $http.interceptors.response.use(
 	function (response) {
+		authStore.resetTimer()
 		return response
 	},
 	function (error) {
+		authStore.resetTimer()
 		return error.response
 	}
 )

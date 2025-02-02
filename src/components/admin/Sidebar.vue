@@ -52,7 +52,6 @@ const links = [
 		icon: 'settings',
 		children: [
 			{ label: 'Roles', link: '#' },
-			{ label: 'Permissions', link: '#' },
 			{ label: 'Users', link: '#' },
 		],
 	},

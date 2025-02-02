@@ -44,6 +44,7 @@ const routes = [
 				meta: { gates: ['MANAGE_USER', 'EDIT_USER'] },
 			},
 		],
+		meta: { guarded: true },
 	},
 	{
 		path: '/login',
@@ -69,9 +70,11 @@ export const initRouter = (app, authStore) => {
 		if (to.meta.guarded && !(await authStore.isAuth())) {
 			return { name: 'login', query: { redirect: to.fullPath } }
 		}
+
 		if (to.meta.guest && (await authStore.isAuth())) {
 			return { name: 'admin-dashboard' }
 		}
+
 		if (to.meta.gates != undefined && to.meta.gates.length !== 0) {
 			const canNavigate = to.meta.gates.every((gate) => {
 				return can(gate)

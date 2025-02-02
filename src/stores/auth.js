@@ -5,13 +5,14 @@ import { AbilityBuilder, Ability } from '@casl/ability'
 export const useAuthStore = defineStore('auth', {
 	state: () => {
 		return {
+			isAuthenticated: false,
 			user: {},
 			roles: [],
-			isAuthenticated: false,
+			logoutTimer: null,
 		}
 	},
 	getters: {
-		user(state) {
+		currentUser(state) {
 			if (state.user['name'] === undefined && localStorage.getItem('user') != null) {
 				return JSON.parse(localStorage.getItem('user'))
 			}

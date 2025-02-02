@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+import { createApp, reactive } from 'vue'
 import './libs/jquery'
 import './scss/style.scss'
 import App from './App.vue'
@@ -48,6 +48,10 @@ const app = createApp(App)
 			withCredentials: true,
 		},
 		crossDomain: false,
+	})
+
+	$(document).ajaxComplete(function () {
+		authStore.resetTimer()
 	})
 
 	app.mount('#app')
